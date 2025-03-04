@@ -1,0 +1,16 @@
+// WeatherDisplay.js
+import React from "react";
+
+function WeatherDisplay({ weather }) {
+  // Determine text color based on temperature
+  const tempColor = weather.temperature > 20 ? "red" : "blue";
+
+  return (
+    <div>
+      <p style={{ color: tempColor }}>Temperature: {weather.temperature}</p>
+      <p>Conditions: {weather.conditions}</p>
+    </div>
+  );
+}
+
+export default WeatherDisplay;
